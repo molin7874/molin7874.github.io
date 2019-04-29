@@ -91,14 +91,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="vue-node-���߿���"><a href="#vue-node-���߿���" class="headerlink" title="vue-node ���߿���"></a>vue-node ���߿���</h2><p><strong>��������С��Ŀ����Ҫ�����˺��Ǽ�����������ߺ�ǰ��˿��򣬽ӿڷ��Ͳ���, �����ص�ȥѰ�ҷ��������˵�һ�η�������markdown�﷨����û��ȫ�����������ȷ�һ���̶̵����²���һ�����Ժ���Ϥ��ʼ��ƪ���� 223</strong><br>(<code>)
+        <h2 id="vue-node-上线跨域"><a href="#vue-node-上线跨域" class="headerlink" title="vue-node 上线跨域"></a>vue-node 上线跨域</h2><p><strong>本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223</strong><br>(<code>)
 router.use(&#39;*&#39;,function (req, res, next) {
-  res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;); //�����ʾ�������������Է��ʣ�����д����Я��cookie�ˡ�
-//res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;http://www.baidu.com&#39;); //����д��ֻ��www.baidu.com ���Է��ʡ�
+  res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;); //这个表示任意域名都可以访问，这样写不能携带cookie了。
+//res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;http://www.baidu.com&#39;); //这样写，只有www.baidu.com 可以访问。
   res.header(&#39;Access-Control-Allow-Headers&#39;, &#39;Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild, stdtoken, STDTOKEN&#39;);
-  res.header(&#39;Access-Control-Allow-Methods&#39;, &#39;PUT, POST, GET, DELETE, OPTIONS&#39;);//���÷���
+  res.header(&#39;Access-Control-Allow-Methods&#39;, &#39;PUT, POST, GET, DELETE, OPTIONS&#39;);//设置方法
   if (req.method == &#39;OPTIONS&#39;) {
-    res.send(200); // ��˼�ǣ�������������֮ǰ���ᷢ��һ����֤���Ƿ��������
+    res.send(200); // 意思是，在正常的请求之前，会发送一个验证，是否可以请求。
   }
   else {
     next();
@@ -109,7 +109,7 @@ router.use(&#39;*&#39;,function (req, res, next) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://molin7874.github.io/2019/04/30/vue/" data-id="cjv2hys4l0002i0ti69ye5l5p" class="article-share-link">Share</a>
+      <a data-url="http://molin7874.github.io/2019/04/30/vue/" data-id="cjv2idty7000298ti9u9f3evk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -159,7 +159,7 @@ router.use(&#39;*&#39;,function (req, res, next) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://molin7874.github.io/2019/04/30/vue-cors/" data-id="cjv2hys430001i0ti4prphuuy" class="article-share-link">Share</a>
+      <a data-url="http://molin7874.github.io/2019/04/30/vue-cors/" data-id="cjv2idtxn000198tiei7dzp4q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -204,7 +204,7 @@ router.use(&#39;*&#39;,function (req, res, next) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://molin7874.github.io/2019/04/28/hello-world/" data-id="cjv2hys3x0000i0tixmw45r09" class="article-share-link">Share</a>
+      <a data-url="http://molin7874.github.io/2019/04/28/hello-world/" data-id="cjv2idtxn000098tigz0fvwo3" class="article-share-link">Share</a>
       
       
     </footer>
