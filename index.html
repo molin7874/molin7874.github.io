@@ -459,10 +459,20 @@
       
         
           
-            <p>##关于router钩子beforeEach##</p>
-<h3 id="注意事项最后一定要加next-回调-结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面-判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证"><a href="#注意事项最后一定要加next-回调-结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面-判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证" class="headerlink" title="注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面, 判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证"></a>注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面, 判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证</h3><p>####实例代码####<br>(…)<br>router.beforeEach((to, from, next) =&gt; {<br>  if (to.matched.some(record =&gt; record.meta.requireAuth)) {<br>    let localtoken = getToken()<br>    if (!localtoken) {<br>      next({path: ‘/login’})<br>    } else {<br>      console.log(111)<br>      next()<br>    }<br>  } else {<br>    next()<br>  }<br>  // 前端响应拦截器 验证token<br>  Vue.prototype.$axios.interceptors.response.use(<br>  response =&gt; {<br>    const rescode = response.data.code<br>    if (rescode === ‘0’) {<br>      return response<br>    } else if (rescode === ‘-4’) {<br>      Vue.prototype.$message(‘token失效 重新登陆’)<br>      removeToken()<br>      router.push({path: ‘/login’})<br>    } else {<br>      console.log(response.data.msg)<br>      return response<br>    }<br>  },<br>  error =&gt; {<br>    console.log(error)<br>    return Promise.reject(error)<br>  }<br>)<br>// 请求拦截器 添加token<br>Vue.prototype.$axios.interceptors.request.use(<br>  config =&gt; {<br>    let localtoken = getToken()<br>    if (localtoken) {<br>      config.headers[‘STDTOKEN’] = localtoken<br>    }<br>    return config<br>  },<br>  error =&gt; {<br>    console.log(error)<br>    Promise.reject(error)<br>  }<br>)<br>(…)</p>
-
+            <p>
+              ##关于router钩子beforeEach##
+注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/02/router-beforeach/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -603,22 +613,20 @@
       
         
           
-            <h2 id="vue-node-上线跨域"><a href="#vue-node-上线跨域" class="headerlink" title="vue-node 上线跨域"></a>vue-node 上线跨域</h2><p><strong>本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223</strong><br>(<code>)
-router.use(&#39;*&#39;,function (req, res, next) {
-  res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;); //这个表示任意域名都可以访问，这样写不能携带cookie了。
-//res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;http://www.baidu.com&#39;); //这样写，只有www.baidu.com 可以访问。
-  res.header(&#39;Access-Control-Allow-Headers&#39;, &#39;Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild, stdtoken, STDTOKEN&#39;);
-  res.header(&#39;Access-Control-Allow-Methods&#39;, &#39;PUT, POST, GET, DELETE, OPTIONS&#39;);//设置方法
-  if (req.method == &#39;OPTIONS&#39;) {
-    res.send(200); // 意思是，在正常的请求之前，会发送一个验证，是否可以请求。
-  }
-  else {
-    next();
-  }
-});
-(</code>)</p>
-
+            <p>
+              vue-node 上线跨域本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223()
+router.use(&#39;*&#39;,functio
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/30/vue/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -755,17 +763,19 @@ router.use(&#39;*&#39;,function (req, res, next) {
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+            <p>
+              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/28/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
