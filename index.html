@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+
+
+
+
+
+
+
+
+
+
+
 
   
-  <title>molin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
   <meta name="description" content="this is molin&apos;s blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="molin">
@@ -17,119 +106,504 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="molin">
 <meta name="twitter:description" content="this is molin&apos;s blog">
+
+
+
+
+
   
-    <link rel="alternate" href="/atom.xml" title="molin" type="application/atom+xml">
   
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">molin</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">notes-blog</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://molin7874.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-router-beforeach" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/02/router-beforeach/" class="article-date">
-  <time datetime="2019-05-01T17:17:22.000Z" itemprop="datePublished">2019-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/02/router-beforeach/">router-beforeach</a>
-    </h1>
+  <link rel="canonical" href="http://molin7874.github.io/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>molin</title>
   
 
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">molin</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">notes-blog</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">0</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">0</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://molin7874.github.io/2019/05/02/router-beforeach/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MoLin">
+      <meta itemprop="description" content="this is molin's blog">
+      <meta itemprop="image" content="/images/lufei.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="molin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/02/router-beforeach/" class="post-title-link" itemprop="url">router-beforeach</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-01 17:17:22 / 修改时间：09:40:18" itemprop="dateCreated datePublished" datetime="2019-05-01T17:17:22Z">2019-05-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##关于router钩子beforeEach##</p>
-<h3 id="注意事项最后一定要加next-回调-结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面-判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证"><a href="#注意事项最后一定要加next-回调-结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面-判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证" class="headerlink" title="注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面, 判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证"></a>注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面, 判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证</h3><p>####实例代码####<br>(…)<br>router.beforeEach((to, from, next) =&gt; {<br>  if (to.matched.some(record =&gt; record.meta.requireAuth)) {<br>    let localtoken = getToken()<br>    if (!localtoken) {<br>      next({path: ‘/login’})<br>    } else {<br>      console.log(111)<br>      next()<br>    }<br>  } else {<br>    next()<br>  }<br>  // 前端响应拦截器 验证token<br>  Vue.prototype.$axios.interceptors.response.use(<br>  response =&gt; {<br>    const rescode = response.data.code<br>    if (rescode === ‘0’) {<br>      return response<br>    } else if (rescode === ‘-4’) {<br>      Vue.prototype.$message(‘token失效 重新登陆’)<br>      removeToken()<br>      router.push({path: ‘/login’})<br>    } else {<br>      console.log(response.data.msg)<br>      return response<br>    }<br>  },<br>  error =&gt; {<br>    console.log(error)<br>    return Promise.reject(error)<br>  }<br>)<br>// 请求拦截器 添加token<br>Vue.prototype.$axios.interceptors.request.use(<br>  config =&gt; {<br>    let localtoken = getToken()<br>    if (localtoken) {<br>      config.headers[‘STDTOKEN’] = localtoken<br>    }<br>    return config<br>  },<br>  error =&gt; {<br>    console.log(error)<br>    Promise.reject(error)<br>  }<br>)<br>(…)</p>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://molin7874.github.io/2019/05/02/router-beforeach/" data-id="cjv516ws3000024tidzulf44s" class="article-share-link">Share</a>
       
+
+      
+        
+          
+            <p>##关于router钩子beforeEach##</p>
+<h3 id="注意事项最后一定要加next-回调-结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面-判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证"><a href="#注意事项最后一定要加next-回调-结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面-判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证" class="headerlink" title="注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面, 判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证"></a>注意事项最后一定要加next()回调, 结果就是返回maxium之类的错误，原因在于路由匹配不到符合你条件的路由，就会一直找下去，找不到的话就会抛出错误，页面直接gg，所以一定要释放钩子，做系统之前一直觉得只要限制路由进入一个特定的页面就验证登录就好，可以随着项目愈发完整，有些页面也需要登录，所以刚刚这一套是行不通的，所以得另找他法，所以在每个路由配置meta项设置需要验证登陆的字段，需要的话进行验证，如果localstorage不存在就直接会跳到login页面, 判定localstorage是否应该存在是根据后端返回的token解析结果，如果没有过期就继续进行使用，有的话再次登录进行验证</h3><p>####实例代码####<br>(…)<br>router.beforeEach((to, from, next) =&gt; {<br>  if (to.matched.some(record =&gt; record.meta.requireAuth)) {<br>    let localtoken = getToken()<br>    if (!localtoken) {<br>      next({path: ‘/login’})<br>    } else {<br>      console.log(111)<br>      next()<br>    }<br>  } else {<br>    next()<br>  }<br>  // 前端响应拦截器 验证token<br>  Vue.prototype.$axios.interceptors.response.use(<br>  response =&gt; {<br>    const rescode = response.data.code<br>    if (rescode === ‘0’) {<br>      return response<br>    } else if (rescode === ‘-4’) {<br>      Vue.prototype.$message(‘token失效 重新登陆’)<br>      removeToken()<br>      router.push({path: ‘/login’})<br>    } else {<br>      console.log(response.data.msg)<br>      return response<br>    }<br>  },<br>  error =&gt; {<br>    console.log(error)<br>    return Promise.reject(error)<br>  }<br>)<br>// 请求拦截器 添加token<br>Vue.prototype.$axios.interceptors.request.use(<br>  config =&gt; {<br>    let localtoken = getToken()<br>    if (localtoken) {<br>      config.headers[‘STDTOKEN’] = localtoken<br>    }<br>    return config<br>  },<br>  error =&gt; {<br>    console.log(error)<br>    Promise.reject(error)<br>  }<br>)<br>(…)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-vue" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/30/vue/" class="article-date">
-  <time datetime="2019-04-29T23:06:25.000Z" itemprop="datePublished">2019-04-29</time>
-</a>
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://molin7874.github.io/2019/04/30/vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MoLin">
+      <meta itemprop="description" content="this is molin's blog">
+      <meta itemprop="image" content="/images/lufei.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="molin">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/30/vue/">vue</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/30/vue/" class="post-title-link" itemprop="url">vue</a>
+              
+            
+          </h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-29 23:06:25 / 修改时间：15:18:42" itemprop="dateCreated datePublished" datetime="2019-04-29T23:06:25Z">2019-04-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="vue-node-上线跨域"><a href="#vue-node-上线跨域" class="headerlink" title="vue-node 上线跨域"></a>vue-node 上线跨域</h2><p><strong>本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223</strong><br>(<code>)
+      
+
+      
+        
+          
+            <h2 id="vue-node-上线跨域"><a href="#vue-node-上线跨域" class="headerlink" title="vue-node 上线跨域"></a>vue-node 上线跨域</h2><p><strong>本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223</strong><br>(<code>)
 router.use(&#39;*&#39;,function (req, res, next) {
   res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;); //这个表示任意域名都可以访问，这样写不能携带cookie了。
 //res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;http://www.baidu.com&#39;); //这样写，只有www.baidu.com 可以访问。
@@ -144,42 +618,144 @@ router.use(&#39;*&#39;,function (req, res, next) {
 });
 (</code>)</p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://molin7874.github.io/2019/04/30/vue/" data-id="cjv516wso000224tienowkc0v" class="article-share-link">Share</a>
+
+    
+
+    
+    
+    
+
+    
+
+    
       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/28/hello-world/" class="article-date">
-  <time datetime="2019-04-28T14:21:39.160Z" itemprop="datePublished">2019-04-28</time>
-</a>
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://molin7874.github.io/2019/04/28/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MoLin">
+      <meta itemprop="description" content="this is molin's blog">
+      <meta itemprop="image" content="/images/lufei.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="molin">
+    </span>
+
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/28/hello-world/">Hello World</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/28/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+              
+            
+          </h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-28 14:21:39" itemprop="dateCreated datePublished" datetime="2019-04-28T14:21:39Z">2019-04-28</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -189,99 +765,333 @@ router.use(&#39;*&#39;,function (req, res, next) {
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://molin7874.github.io/2019/04/28/hello-world/" data-id="cjv516wsh000124tifohumj47" class="article-share-link">Share</a>
+
+    
+
+    
+    
+    
+
+    
+
+    
       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+  </section>
 
   
 
 
-</section>
+          </div>
+          
+
+        </div>
         
-          <aside id="sidebar">
+          
   
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li></ul>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/05/02/router-beforeach/">router-beforeach</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/30/vue/">vue</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/28/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/lufei.jpg" alt="MoLin">
+            
+              <p class="site-author-name" itemprop="name">MoLin</p>
+              <div class="site-description motion-element" itemprop="description">this is molin's blog</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
     </div>
-  </div>
-
+  </aside>
   
-</aside>
+
+
         
       </div>
-      <footer id="footer">
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">?2018 by Eirunye</span>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 MoLin<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
 
+    
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
+    
   </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
 </body>
 </html>
