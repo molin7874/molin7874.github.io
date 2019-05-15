@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="molin">
 <meta property="og:description" content="从18年到现在实习差不多半年了，项目做的不算多也不算少了，总是做着相似的事请，项目并不是全部模块你都知晓，只有一小部分才是你最熟悉的，这是必然的，经验不多还是得从小事做起，但是这也不能阻止自己贯通一个项目的念头，知晓一个项目的全部，方可十拿九稳. 项目搭建vue-cli初始化的项目是一个通用的架子，但是还不是完整的架子，比如说axios请求接口封装， vue-router的模式选择，懒加载等等所以">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-04T13:25:17.936Z">
+<meta property="og:updated_time" content="2019-05-15T14:59:04.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue2.x搭建">
 <meta name="twitter:description" content="从18年到现在实习差不多半年了，项目做的不算多也不算少了，总是做着相似的事请，项目并不是全部模块你都知晓，只有一小部分才是你最熟悉的，这是必然的，经验不多还是得从小事做起，但是这也不能阻止自己贯通一个项目的念头，知晓一个项目的全部，方可十拿九稳. 项目搭建vue-cli初始化的项目是一个通用的架子，但是还不是完整的架子，比如说axios请求接口封装， vue-router的模式选择，懒加载等等所以">
@@ -416,12 +416,24 @@
                 
               
 
-              <time title="创建时间：2019-05-04 21:08:47 / 修改时间：13:25:17" itemprop="dateCreated datePublished" datetime="2019-05-04T21:08:47Z">2019-05-04</time>
+              <time title="创建时间：2019-05-04 21:08:47" itemprop="dateCreated datePublished" datetime="2019-05-04T21:08:47Z">2019-05-04</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-15 14:59:04" itemprop="dateModified" datetime="2019-05-15T14:59:04Z">2019-05-15</time>
               
             
           </span>
@@ -459,13 +471,13 @@
 <h3 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h3><p>vue-cli初始化的项目是一个通用的架子，但是还不是完整的架子，比如说axios请求接口封装， vue-router的模式选择，懒加载等等所以这些虽然在工作中已经有人做好了但是自己实践一边还是受益匪浅的！直接上代码吧</p>
 <h4 id="axios接口封装"><a href="#axios接口封装" class="headerlink" title="axios接口封装"></a>axios接口封装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">request.js</span><br><span class="line">import axios from <span class="string">'axios'</span></span><br><span class="line">import &#123; getToken, removeToken &#125; from <span class="string">'@/utils/auth'</span></span><br><span class="line">const service = axios.create(&#123;</span><br><span class="line">  timeout: 15000,</span><br><span class="line">  withCredentials: <span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line">// 发送请求拦截器</span><br><span class="line">service.interceptors.request.use(</span><br><span class="line">  config =&gt; &#123;</span><br><span class="line">    var localToken = getToken()</span><br><span class="line">    <span class="keyword">if</span> (localToken) &#123;</span><br><span class="line">      // 携带token</span><br><span class="line">      config.headers.TOKEN = localToken</span><br><span class="line">    &#125;</span><br><span class="line">    // 微信添加timestamp</span><br><span class="line">    // config.url = dealUrl(config)</span><br><span class="line">    // config.headers[<span class="string">'Content-Type'</span>] = <span class="string">'application/json'</span></span><br><span class="line">    <span class="built_in">return</span> config</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    console.log(error) // <span class="keyword">for</span> debug</span><br><span class="line">    Promise.reject(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// respone拦截器</span><br><span class="line">service.interceptors.response.use(</span><br><span class="line">  response =&gt; &#123;</span><br><span class="line">    const rescode = response.data.code</span><br><span class="line">    <span class="keyword">if</span> (rescode === <span class="string">'0'</span>) &#123;</span><br><span class="line">      <span class="built_in">return</span> response</span><br><span class="line">      // 通过返回码判断清除token</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rescode === <span class="string">'-4'</span>) &#123;</span><br><span class="line">      this.<span class="variable">$message</span>(<span class="string">'token失效 重新登陆'</span>)</span><br><span class="line">      removeToken()</span><br><span class="line">      // 路由会回跳登录页面</span><br><span class="line">      // router.push(&#123;path: <span class="string">'/login'</span>&#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      console.log(response.data.msg)</span><br><span class="line">      <span class="built_in">return</span> response</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    console.log(error)</span><br><span class="line">    <span class="built_in">return</span> Promise.reject(error)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>…<br>// 封装请求方法<br>const get = (url, params = {}) =&gt; {<br>  debugger<br>  return new Promise((resolve, reject) =&gt; {<br>    service.get(url, {<br>      params: params<br>    })<br>      .then(response =&gt; {<br>        console.info(url)<br>        resolve(response.data)<br>      })<br>      .catch(err =&gt; {<br>        reject(err)<br>      })<br>  })<br>}</p>
+<p>…bash<br>// 封装请求方法<br>const get = (url, params = {}) =&gt; {<br>  debugger<br>  return new Promise((resolve, reject) =&gt; {<br>    service.get(url, {<br>      params: params<br>    })<br>      .then(response =&gt; {<br>        console.info(url)<br>        resolve(response.data)<br>      })<br>      .catch(err =&gt; {<br>        reject(err)<br>      })<br>  })<br>}</p>
 <p>const post = (url, data = {}) =&gt; {<br>  return new Promise((resolve, reject) =&gt; {<br>    service.post(url, data)<br>      .then(response =&gt; {<br>        resolve(response.data)<br>      }, err =&gt; {<br>        reject(err)<br>      })<br>  })<br>}</p>
 <p>const drop = (url, data = {}) =&gt; {<br>  return new Promise((resolve, reject) =&gt; {<br>    service.delete(url, data)<br>      .then(response =&gt; {<br>        resolve(response.data)<br>      }, err =&gt; {<br>        reject(err)<br>      })<br>  })<br>}</p>
 <p>const patch = (url, data = {}) =&gt; {<br>  return new Promise((resolve, reject) =&gt; {<br>    service.patch(url, data)<br>      .then(response =&gt; {<br>        resolve(response.data)<br>      }, err =&gt; {<br>        reject(err)<br>      })<br>  })<br>}</p>
 <p>const put = (url, data = {}) =&gt; {<br>  return new Promise((resolve, reject) =&gt; {<br>    service.put(url, data)<br>      .then(response =&gt; {<br>        resolve(response.data)<br>      }, err =&gt; {<br>        reject(err)<br>      })<br>  })<br>}<br>// 导出<br>export const apis = { get, post, drop, patch, put }</p>
-<p>export default service<br>…<br>…<br>index.js<br>import Vue from ‘vue’<br>// 引用px 转 rem<br>// import ‘@/utils/setHtmlFontSize’<br>// 引入lodash<br>import lodash from ‘lodash’<br>// 引入接口请求<br>import { apis } from ‘./request.js’<br>const allUtils = Object.assign({}, apis, {lodash})<br>// 添加$ 标识符指令<br>Object.keys(allUtils).forEach(k =&gt; {<br>  Vue.prototype[‘$’ + k] = allUtils[k]<br>})</p>
-<p>export default allUtils<br>…<br>…<br>main.js<br>//在main.js 引用即可<br>import ‘@/utils/index’<br>…</p>
+<p>export default service<br>…<br>…bash<br>index.js<br>import Vue from ‘vue’<br>// 引用px 转 rem<br>// import ‘@/utils/setHtmlFontSize’<br>// 引入lodash<br>import lodash from ‘lodash’<br>// 引入接口请求<br>import { apis } from ‘./request.js’<br>const allUtils = Object.assign({}, apis, {lodash})<br>// 添加$ 标识符指令<br>Object.keys(allUtils).forEach(k =&gt; {<br>  Vue.prototype[‘$’ + k] = allUtils[k]<br>})</p>
+<p>export default allUtils<br>…<br>…bash<br>main.js<br>//在main.js 引用即可<br>import ‘@/utils/index’<br>…</p>
 
       
     </div>
