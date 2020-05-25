@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="vue-node 上线跨域本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223() router.use(&amp;#39;*&amp;#39;,function (req, res, next) {   res.header(&amp;#39;Access-Cont">
+  <meta name="description" content="flutter widget 常用片段(1)自从博主开始接触fltter开始后, flutter写的页面和以往的页面完全不一致，各种组件都是定制化 感觉没有web的那么开放不过flutter页面 和 动画效果都很不错 记下这篇博客是因为很多东西容易忘记 不像css拆分成很小的指令 常用widget 片段Container123456789101112131415161718192021222324">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue">
-<meta property="og:url" content="http://molin7874.github.io/2019/04/30/vue/index.html">
+<meta property="og:title" content="flutter">
+<meta property="og:url" content="http://molin7874.github.io/2020/05/26/flutter/index.html">
 <meta property="og:site_name" content="molin">
-<meta property="og:description" content="vue-node 上线跨域本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223() router.use(&amp;#39;*&amp;#39;,function (req, res, next) {   res.header(&amp;#39;Access-Cont">
+<meta property="og:description" content="flutter widget 常用片段(1)自从博主开始接触fltter开始后, flutter写的页面和以往的页面完全不一致，各种组件都是定制化 感觉没有web的那么开放不过flutter页面 和 动画效果都很不错 记下这篇博客是因为很多东西容易忘记 不像css拆分成很小的指令 常用widget 片段Container123456789101112131415161718192021222324">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-29T15:18:42.482Z">
+<meta property="og:updated_time" content="2020-05-25T14:05:54.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue">
-<meta name="twitter:description" content="vue-node 上线跨域本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223() router.use(&amp;#39;*&amp;#39;,function (req, res, next) {   res.header(&amp;#39;Access-Cont">
+<meta name="twitter:title" content="flutter">
+<meta name="twitter:description" content="flutter widget 常用片段(1)自从博主开始接触fltter开始后, flutter写的页面和以往的页面完全不一致，各种组件都是定制化 感觉没有web的那么开放不过flutter页面 和 动画效果都很不错 记下这篇博客是因为很多东西容易忘记 不像css拆分成很小的指令 常用widget 片段Container123456789101112131415161718192021222324">
 
 
 
@@ -114,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://molin7874.github.io/2019/04/30/vue/">
+  <link rel="canonical" href="http://molin7874.github.io/2020/05/26/flutter/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>vue | molin</title>
+  <title>flutter | molin</title>
   
 
 
@@ -373,7 +373,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://molin7874.github.io/2019/04/30/vue/">
+    <link itemprop="mainEntityOfPage" href="http://molin7874.github.io/2020/05/26/flutter/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MoLin">
@@ -390,7 +390,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vue
+          <h1 class="post-title" itemprop="name headline">flutter
 
               
             
@@ -416,7 +416,7 @@
                 
               
 
-              <time title="创建时间：2019-04-29 23:06:25 / 修改时间：15:18:42" itemprop="dateCreated datePublished" datetime="2019-04-29T23:06:25Z">2019-04-29</time>
+              <time title="创建时间：2020-05-25 21:42:27 / 修改时间：14:05:54" itemprop="dateCreated datePublished" datetime="2020-05-25T21:42:27Z">2020-05-25</time>
             
 
             
@@ -455,20 +455,9 @@
       
 
       
-        <h2 id="vue-node-上线跨域"><a href="#vue-node-上线跨域" class="headerlink" title="vue-node 上线跨域"></a>vue-node 上线跨域</h2><p><strong>本人做的小项目终于要上线了很是激动，结果上线前后端跨域， 接口发送不出，所以特地去寻找解决方法， 本人第一次发送文章markdown语法还是没有基本掌握，所以发送一篇小篇幅文章，以后熟悉后开始长篇大论 223</strong><br>(<code>)
-router.use(&#39;*&#39;,function (req, res, next) {
-  res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;); //这个表示任意域名都可以访问，这样写不能携带cookie了。
-//res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;http://www.baidu.com&#39;); //这样写，只有www.baidu.com 可以访问。
-  res.header(&#39;Access-Control-Allow-Headers&#39;, &#39;Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild, stdtoken, STDTOKEN&#39;);
-  res.header(&#39;Access-Control-Allow-Methods&#39;, &#39;PUT, POST, GET, DELETE, OPTIONS&#39;);//设置方法
-  if (req.method == &#39;OPTIONS&#39;) {
-    res.send(200); // 意思是，在正常的请求之前，会发送一个验证，是否可以请求。
-  }
-  else {
-    next();
-  }
-});
-(</code>)</p>
+        <h2 id="flutter-widget-常用片段-1"><a href="#flutter-widget-常用片段-1" class="headerlink" title="flutter widget 常用片段(1)"></a>flutter widget 常用片段(1)</h2><p>自从博主开始接触fltter开始后, flutter写的页面和以往的页面完全不一致，各种组件都是定制化 感觉没有web的那么开放不过flutter页面 和 动画效果都很不错 记下这篇博客是因为很多东西容易忘记 不像css拆分成很小的指令</p>
+<h3 id="常用widget-片段"><a href="#常用widget-片段" class="headerlink" title="常用widget 片段"></a>常用widget 片段</h3><h4 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">Container(&#123;</span><br><span class="line">    Key key,</span><br><span class="line">    this.alignment,</span><br><span class="line">    this.padding,</span><br><span class="line">    Color color,</span><br><span class="line">    Decoration decoration,</span><br><span class="line">    this.foregroundDecoration,</span><br><span class="line">    double width,</span><br><span class="line">    double height,</span><br><span class="line">    BoxConstraints constraints,</span><br><span class="line">    this.margin,</span><br><span class="line">    this.transform,</span><br><span class="line">    this.child,</span><br><span class="line">  &#125;)</span><br><span class="line">  平时使用最多的，也就是padding、color、width、height、margin属性</span><br><span class="line">  大部分widget 没有padding margin 一般都需要嵌套Container </span><br><span class="line">  所以Container 可以理解为web 的div  Container 具有边界效应 所以flutter可以增加Contaner</span><br><span class="line">  获得宽高 就不会报错了</span><br><span class="line">  Container(</span><br><span class="line">         constraints: BoxConstraints(</span><br><span class="line">            minWidth: 180, // css min-width</span><br><span class="line">            minHeight: 50, // 同上</span><br><span class="line">          ),</span><br><span class="line">          width: 50,</span><br><span class="line">          heigth: 50,</span><br><span class="line">        decoration: new BoxDecoration(</span><br><span class="line">        border: new Border.all(width: 2.0, color: Colors.red), // 边界</span><br><span class="line">        color: Colors.grey, // 背景色</span><br><span class="line">        borderRadius: new BorderRadius.all(new Radius.circular(20.0)), // 圆角</span><br><span class="line">        image: new DecorationImage(</span><br><span class="line">          image: new NetworkImage(<span class="string">'xxxxxx'</span>), // 背景图</span><br><span class="line">          centerSlice: new Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),</span><br><span class="line">        ),</span><br><span class="line">        margin: const EdgeInsets.all(8.0),</span><br><span class="line">        padding: const EdgeInsets.all(8.0),</span><br><span class="line">        alignment: Alignment.center,</span><br><span class="line">        child: Widget // 子节点</span><br><span class="line">  ),</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<h5 id="Row-Column"><a href="#Row-Column" class="headerlink" title="Row Column"></a>Row Column</h5><p>row Column 差不多和web的flex的 水平分布和垂直分布差不多 Container只能单节点 (child 只能是一个widget  但是这俩货 可以是多个 它们用的是children<widget>[] 它们可以接受多个widget)<br>for example<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">// Column 和 Row 相似 区别和flex 一样 中心轴交换了而已</span><br><span class="line">Row(&#123;</span><br><span class="line">  Key key,</span><br><span class="line">  MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,</span><br><span class="line">  MainAxisSize mainAxisSize = MainAxisSize.max,</span><br><span class="line">  CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,</span><br><span class="line">  TextDirection textDirection,</span><br><span class="line">  VerticalDirection verticalDirection = VerticalDirection.down,</span><br><span class="line">  TextBaseline textBaseline,</span><br><span class="line">  List&lt;Widget&gt; children = const &lt;Widget&gt;[],</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// center：将children放置在主轴的中心；</span><br><span class="line">// end：将children放置在主轴的末尾；</span><br><span class="line">// spaceAround：将主轴方向上的空白区域均分，使得children之间的空白区域相等，但是首尾child的空白区域为1/2；</span><br><span class="line">// spaceBetween：将主轴方向上的空白区域均分，使得children之间的空白区域相等，首尾child都靠近首尾，没有间隙；</span><br><span class="line">// spaceEvenly：将主轴方向上的空白区域均分，使得children之间的空白区域相等，包括首尾child；</span><br><span class="line">// start：将children放置在主轴的起点；</span><br><span class="line">Row(</span><br><span class="line">  children: &lt;Widget&gt;[</span><br><span class="line">    Expanded( // Expanded 只能处于Row column 的子节点中 相当于web flex中的 flex 属性 占满剩余宽度 默认属性 flex:1</span><br><span class="line">      child: Container(</span><br><span class="line">        color: Colors.red,</span><br><span class="line">        padding: EdgeInsets.all(5.0),</span><br><span class="line">      ),</span><br><span class="line">      flex: 1,</span><br><span class="line">    ),</span><br><span class="line">    Expanded(</span><br><span class="line">      child: Container(</span><br><span class="line">        color: Colors.yellow,</span><br><span class="line">        padding: EdgeInsets.all(5.0),</span><br><span class="line">      ),</span><br><span class="line">      flex: 2, //表示剩余宽度占据 2两份</span><br><span class="line">    ),</span><br><span class="line">    Expanded(</span><br><span class="line">      child: Container(</span><br><span class="line">        color: Colors.blue,</span><br><span class="line">        padding: EdgeInsets.all(5.0),</span><br><span class="line">      ),</span><br><span class="line">      flex: 1,</span><br><span class="line">    ),</span><br><span class="line">  ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure></widget></p>
 
       
     </div>
@@ -499,8 +488,8 @@ router.use(&#39;*&#39;,function (req, res, next) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/28/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/06/30/钉钉小程序/" rel="next" title="钉钉小程序">
+                <i class="fa fa-chevron-left"></i> 钉钉小程序
               </a>
             
           </div>
@@ -508,10 +497,6 @@ router.use(&#39;*&#39;,function (req, res, next) {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/02/router-beforeach/" rel="prev" title="router-beforeach">
-                router-beforeach <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,7 +609,7 @@ router.use(&#39;*&#39;,function (req, res, next) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-node-上线跨域"><span class="nav-number">1.</span> <span class="nav-text">vue-node 上线跨域</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#flutter-widget-常用片段-1"><span class="nav-number">1.</span> <span class="nav-text">flutter widget 常用片段(1)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用widget-片段"><span class="nav-number">1.1.</span> <span class="nav-text">常用widget 片段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Container"><span class="nav-number">1.1.1.</span> <span class="nav-text">Container</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Row-Column"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Row Column</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
